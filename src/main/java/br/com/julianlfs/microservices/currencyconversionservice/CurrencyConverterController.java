@@ -22,7 +22,7 @@ public class CurrencyConverterController {
     public CurrencyConversionBean convertCurrencyFeign(@PathVariable("from") String from,
                                                   @PathVariable("to") String to,
                                                   @PathVariable("quantity") BigDecimal quantity) {
-        
+
         CurrencyConversionBean response = proxy.retriveExchangeValue(from, to);
 
         return new CurrencyConversionBean(response.getId(),
